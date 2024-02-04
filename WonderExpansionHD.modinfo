@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="b77737f9-b05c-4a7d-afd5-431e1131dfcb" version="1">
+	<Properties>
+	<Name>LOC_WONDEREXPANSIONHD_NAME</Name>
+	<Description>LOC_WONDEREXPANSIONHD_DESCRIPTION</Description>
+	<Teaser>LOC_WONDEREXPANSIONHD_TEASER</Teaser>
+	<Authors>时代的先驱，六亿神州尽舜尧</Authors>
+	<SpecialThanks>悸动战士，Phantagonist</SpecialThanks>
+	<AffectsSavedGames>1</AffectsSavedGames>
+	<CompatibleVersions>1.2,2.0</CompatibleVersions>
+	</Properties>
+	<LocalizedText>
+	<Text id="LOC_WONDEREXPANSIONHD_NAME">
+		<en_US>WonderExpansionHD</en_US>
+		<zh_Hans_CN>HD的奇观扩展</zh_Hans_CN>
+	</Text>
+	<Text id="LOC_WONDEREXPANSIONHD_DESCRIPTION">
+		<en_US>Adaptation of the "HD" versions of some of the wonders of the Workshop (with the permission of the original authors).Recommended subscription module: module title Chinese, you can view the Chinese label after the unified spectacle module, easy to find.</en_US>
+		<zh_Hans_CN>为工坊一些奇观提供和而不同版本的适配（已获得原作者同意）。推荐订阅模组：模组标题汉化，可以查看汉化后标签统一的奇观模组，方便进行查找。</zh_Hans_CN>
+	</Text>
+	<Text id="LOC_WONDEREXPANSIONHD_TEASER">
+		<en_US>WonderExpansionHD</en_US>
+		<zh_Hans_CN>HD的奇观扩展</zh_Hans_CN>
+	</Text>
+	</LocalizedText>
+	<Dependencies>
+		<Mod id="521b8777-0977-4859-a5ee-3e411a732e5c" title="Civ6 Plus: Harmony in Diversity" />
+	</Dependencies>
+	<FrontEndActions>
+		<UpdateText id="ModManager_CustomFilters">
+			<Properties>
+				<LoadOrder>15060</LoadOrder>
+			</Properties>
+			<File>ModManager_HD.sql</File>
+		</UpdateText>
+		<UpdateText id="TitleLocalization">
+			<Properties>
+				<LoadOrder>100000</LoadOrder>
+			</Properties>
+			<File>TitleLocalization.sql</File>
+		</UpdateText>
+	</FrontEndActions>
+	<InGameActions>
+		<UpdateDatabase id="database">
+			<Properties>
+				<LoadOrder>20000</LoadOrder>
+			</Properties>
+			<File>WonderExpansionHD.sql</File>
+		</UpdateDatabase>
+		<UpdateText id="text">
+			<Properties>
+				<LoadOrder>110000</LoadOrder>
+			</Properties>
+			<File>WonderExpansionHD_text.sql</File>
+		</UpdateText>
+		<AddGameplayScripts id="Gameplay" criteria="Expansion2">
+			<Properties>
+				<LoadOrder>21000</LoadOrder>
+			</Properties>
+			<File>SANTA_MARIA_DEL_FIORE.lua</File>
+		  </AddGameplayScripts>
+	</InGameActions>
+	<Files>
+		<File>ModManager_HD.sql</File>
+		<File>WonderExpansionHD.sql</File>
+		<File>WonderExpansionHD_text.sql</File>
+		<File>TitleLocalization.sql</File>
+		<File>SANTA_MARIA_DEL_FIORE.lua</File>
+	</Files>
+</Mod>
